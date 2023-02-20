@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-addBook.addEventListener('click', (el) => {
+addBook.addEventListener('click', (e) => {
   const newBook = new Book(title.value, author.value);
   e.preventDefault();
   addBookToList(newBook);
