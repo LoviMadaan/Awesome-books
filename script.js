@@ -23,7 +23,7 @@ function addBookToList(newBook) {
   return document.querySelector('.books').innerHTML
 }
 
-document.addEventListener('DOMContentLoaded'.charAt()=> {
+document.addEventListener('DOMContentLoaded', () => {
     if (bookList !==null){
         storedData = [...JSON.parse(localStorage.getItem('localBookList'))];
         storedData.forEach((item)=>{
