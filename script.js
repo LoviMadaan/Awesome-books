@@ -20,16 +20,34 @@ function addBookToList(newBook) {
     </div>
   `;
   document.querySelector('.books').innerHTML += bookTemp;
-  return document.querySelector('.books').innerHTML
+  return document.querySelector('.books').innerHTML;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    if (bookList !==null){
-        storedData = [...JSON.parse(localStorage.getItem('localBookList'))];
-        storedData.forEach((item)=>{
-            addBookToList(item);            
-        });
-    }
-} );
+  if (bookList !== null) {
+    storedData = [...JSON.parse(localStorage.getItem('localBookList'))];
+    storedData.forEach((item) => {
+      addBookToList(item);
+    });
+  }
+});
 
-addBook.addEventListener ('')
+addBook.addEventListener('click', (el) => {
+  const newBook = new Book(title.value, author.value);
+  e.preventDefault();
+  addBookToList(newBook);
+  storedData.push(newBook);
+  title.value = '';
+  author.value = '';
+  localStorage.setItem('localBookList', JSON.stringify(storedData));
+});
+
+bookList.addEventListener('click', (el) => {
+  if (el.target.classList.contains('delete')) {
+    document.querySelector('.books').removeChild(el.target.parentElement);
+    const bookD = el.target.parentElement;
+    const removeBook = storedData.find((item) => item.title === bookD.firstChild.innerText);
+    storedData.splice(storedData.indexOf(removeBook), 1);
+    localStorage.setItem('localBookList', JSON.stringify(storedData));
+  }
+});
