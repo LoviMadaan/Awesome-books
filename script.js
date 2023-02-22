@@ -44,7 +44,6 @@ class Book {
       <h4>${book.title}</h4>
       <h4>&nbsp;by ${book.author}</h4>
       <button type="button" class= "delete">Remove </button>
-     
       `;
 
     list.appendChild(texty);
@@ -71,6 +70,7 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
   Book.addBookToList(book);
   Book.addBook(book);
   Book.clearFields();
+
 });
 
 document.querySelector('#book-list').addEventListener('click', (e) => {
@@ -107,6 +107,8 @@ function addNew() {
   addBook.style.display = "block"
   bookList.style.display = "none";
 }
+
+document.addEventListener("DOMContentLoaded", addNew)
 
 document.querySelector(".Contact").addEventListener("click", contact)
 
