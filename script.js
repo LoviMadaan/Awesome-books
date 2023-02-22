@@ -79,3 +79,26 @@ document.querySelector('#book-list').addEventListener('click', (e) => {
   Book.re(e.target.previousSibling.previousSibling.previousSibling.previousSibling.textContent,
     e.target.previousSibling.previousSibling.textContent);
 });
+
+function contact() {
+  bookList = document.querySelector(".addedBooks")
+  contactForm = document.querySelector(".contact-form")
+  addBook = document.querySelector(".form1")
+  contactForm.style.display = "flex"
+  addBook.style.display = "none"
+  bookList.style.display = "none";
+}
+
+
+function bookShelf() {
+  bookList = document.querySelector(".addedBooks")
+  contactForm = document.querySelector(".contact-form")
+  addBook = document.querySelector(".awesome")
+  contactForm.style.display = "none"
+  addBook.style.display = "none"
+  bookList.style.display = "block";
+}
+
+document.querySelector(".Contact").addEventListener("click", contact)
+
+document.querySelector(".List").addEventListener("click", bookShelf)
