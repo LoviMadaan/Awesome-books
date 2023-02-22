@@ -8,7 +8,6 @@ body {
 .nav-bar {
   display: flex;
   border: 3px black solid;
-  width: 600px;
   margin-left: auto;
   margin-right: auto;
   justify-content: space-around;
@@ -64,12 +63,13 @@ a:active {
 }
 
 footer {
+  position: fixed;
   margin-top: 30px;
   border: 3px black solid;
-  width: 600px;
   text-align: left;
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
+  width: 100%;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
