@@ -5,21 +5,21 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-.nav-bar{
+.nav-bar {
   display: flex;
   border: 3px black solid;
   width: 600px;
   margin-left: auto;
   margin-right: auto;
   justify-content: space-around;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.first-child{
- margin-right: 250px;
+.first-child {
+  margin-right: 250px;
 }
 
-.contact-form{
+.contact-form {
   display: none;
   flex-direction: column;
   justify-content: flex-start;
@@ -29,28 +29,27 @@ body {
   margin-right: auto;
 }
 
-.contact-form h2{
+.contact-form h2 {
   text-align: center;
 }
 
-.message{
-  margin-bottom: -8px
+.message {
+  margin-bottom: -8px;
 }
 
-#book-list{
+#book-list {
   border: 3px solid black;
   width: 500px;
   margin-left: auto;
   margin-right: auto;
-  
 }
 
-.container{
+.container {
   display: flex;
   justify-content: center;
   border: 1px  solid black;
   align-items: center;
- height: 20px;
+  height: 20px;
 }
 
 .container button {
@@ -58,13 +57,13 @@ body {
   margin-left: auto;
 }
 
-
-a:link, a:visited, a:active{
+a:link,
+a:visited,
+a:active {
   text-decoration: none;
-  
 }
 
-footer{
+footer {
   margin-top: 30px;
   border: 3px black solid;
   width: 600px;
@@ -72,5 +71,5 @@ footer{
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
