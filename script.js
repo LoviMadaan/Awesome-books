@@ -41,9 +41,8 @@ class Book {
     const texty = document.createElement('h4');
 
     texty.innerHTML = `
-      <h4>${book.title}</h4>
-      <h4>${book.author}</h4>
-      <button type="button" class= "delete">Remove </button>
+      <h4>${book.title} by ${book.author} <spane><button type="button" class= "delete">Remove </button></spane></h4>
+      
       <hr>
       `;
 
@@ -83,7 +82,7 @@ document.querySelector('#book-list').addEventListener('click', (e) => {
 function contact() {
   bookList = document.querySelector(".addedBooks")
   contactForm = document.querySelector(".contact-form")
-  addBook = document.querySelector(".form1")
+  addBook = document.querySelector(".awesome")
   contactForm.style.display = "flex"
   addBook.style.display = "none"
   bookList.style.display = "none";
@@ -99,6 +98,17 @@ function bookShelf() {
   bookList.style.display = "block";
 }
 
+function addNew() {
+  bookList = document.querySelector(".addedBooks")
+  contactForm = document.querySelector(".contact-form")
+  addBook = document.querySelector(".awesome")
+  contactForm.style.display = "none"
+  addBook.style.display = "block"
+  bookList.style.display = "none";
+}
+
 document.querySelector(".Contact").addEventListener("click", contact)
+
+document.querySelector(".Add").addEventListener("click", addNew)
 
 document.querySelector(".List").addEventListener("click", bookShelf)
