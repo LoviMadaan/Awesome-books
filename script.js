@@ -39,11 +39,12 @@ class Book {
     const list = document.querySelector('#book-list');
 
     const texty = document.createElement('h4');
-
+    texty.classList.add("container")
     texty.innerHTML = `
-      <h4>${book.title} by ${book.author} <spane><button type="button" class= "delete">Remove </button></spane></h4>
-      
-      <hr>
+      <h4>${book.title}</h4>
+      <h4>&nbsp;by ${book.author}</h4>
+      <button type="button" class= "delete">Remove </button>
+     
       `;
 
     list.appendChild(texty);
