@@ -39,12 +39,12 @@ class Book {
     const list = document.querySelector('#book-list');
 
     const texty = document.createElement('h4');
-
+    texty.classList.add('container');
     texty.innerHTML = `
       <h4>${book.title}</h4>
+      &nbsp;by&nbsp;
       <h4>${book.author}</h4>
       <button type="button" class= "delete">Remove </button>
-      <hr>
       `;
 
     list.appendChild(texty);
@@ -79,3 +79,38 @@ document.querySelector('#book-list').addEventListener('click', (e) => {
   Book.re(e.target.previousSibling.previousSibling.previousSibling.previousSibling.textContent,
     e.target.previousSibling.previousSibling.textContent);
 });
+
+function contact() {
+  const bookList = document.querySelector('.addedBooks');
+  const contactForm = document.querySelector('.contact-form');
+  const addBook = document.querySelector('.awesome');
+  contactForm.style.display = 'flex';
+  addBook.style.display = 'none';
+  bookList.style.display = 'none';
+}
+
+function bookShelf() {
+  const bookList = document.querySelector('.addedBooks');
+  const contactForm = document.querySelector('.contact-form');
+  const addBook = document.querySelector('.awesome');
+  contactForm.style.display = 'none';
+  addBook.style.display = 'none';
+  bookList.style.display = 'block';
+}
+
+function addNew() {
+  const bookList = document.querySelector('.addedBooks');
+  const contactForm = document.querySelector('.contact-form');
+  const addBook = document.querySelector('.awesome');
+  contactForm.style.display = 'none';
+  addBook.style.display = 'block';
+  bookList.style.display = 'none';
+}
+
+document.addEventListener('DOMContentLoaded', addNew);
+
+document.querySelector('.Contact').addEventListener('click', contact);
+
+document.querySelector('.Add').addEventListener('click', addNew);
+
+document.querySelector('.List').addEventListener('click', bookShelf);

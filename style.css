@@ -4,3 +4,72 @@ body {
   text-align: center;
   font-family: 'Lato', sans-serif;
 }
+
+.nav-bar {
+  display: flex;
+  border: 3px black solid;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-around;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.first-child {
+  margin-right: 250px;
+}
+
+.contact-form {
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 500px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-form h2 {
+  text-align: center;
+}
+
+.message {
+  margin-bottom: -8px;
+}
+
+#book-list {
+  border: 3px solid black;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  border: 1px  solid black;
+  align-items: center;
+  height: 20px;
+}
+
+.container button {
+  height: 20px;
+  margin-left: auto;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+footer {
+  position: fixed;
+  margin-top: 30px;
+  border: 3px black solid;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  width: 100%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
